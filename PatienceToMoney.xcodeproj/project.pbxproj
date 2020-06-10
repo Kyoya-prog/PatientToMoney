@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191C781B50BBD8A6ED0FDE71 /* Pods_PatienceToMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B38338CFD423CB2E884E9C /* Pods_PatienceToMoney.framework */; };
 		3D33C6CA248FB7A0008FC368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6C9248FB7A0008FC368 /* AppDelegate.swift */; };
 		3D33C6CC248FB7A0008FC368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6CB248FB7A0008FC368 /* SceneDelegate.swift */; };
 		3D33C6CE248FB7A0008FC368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6CD248FB7A0008FC368 /* ViewController.swift */; };
@@ -14,6 +15,14 @@
 		3D33C6D3248FB7A1008FC368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D33C6D2248FB7A1008FC368 /* Assets.xcassets */; };
 		3D33C6D6248FB7A1008FC368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D33C6D4248FB7A1008FC368 /* LaunchScreen.storyboard */; };
 		3D33C6E1248FB7A1008FC368 /* PatienceToMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6E0248FB7A1008FC368 /* PatienceToMoneyTests.swift */; };
+		3D33C6EC248FB8FE008FC368 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6EB248FB8FE008FC368 /* IndexViewController.swift */; };
+		3D33C6EE248FB97C008FC368 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6ED248FB97C008FC368 /* Firebase.swift */; };
+		3D33C6F0248FBA7C008FC368 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D33C6EF248FBA7C008FC368 /* GoogleService-Info.plist */; };
+		3D33C6F2248FCD44008FC368 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6F1248FCD44008FC368 /* InputViewController.swift */; };
+		3D33C6F4248FD084008FC368 /* Patiences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6F3248FD084008FC368 /* Patiences.swift */; };
+		3D33C6F62490AA07008FC368 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6F52490AA07008FC368 /* DetailViewController.swift */; };
+		3D3D43A72490C8A3005E41CD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D43A62490C8A3005E41CD /* EditViewController.swift */; };
+		D2AEC639CC8A11AB8C404135 /* Pods_PatienceToMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD54BEA98A35BD6715142D4 /* Pods_PatienceToMoneyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FD54BEA98A35BD6715142D4 /* Pods_PatienceToMoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatienceToMoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D33C6C6248FB7A0008FC368 /* PatienceToMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatienceToMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D33C6C9248FB7A0008FC368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D33C6CB248FB7A0008FC368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +48,18 @@
 		3D33C6DC248FB7A1008FC368 /* PatienceToMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatienceToMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D33C6E0248FB7A1008FC368 /* PatienceToMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatienceToMoneyTests.swift; sourceTree = "<group>"; };
 		3D33C6E2248FB7A1008FC368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D33C6EB248FB8FE008FC368 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		3D33C6ED248FB97C008FC368 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		3D33C6EF248FBA7C008FC368 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3D33C6F1248FCD44008FC368 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		3D33C6F3248FD084008FC368 /* Patiences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patiences.swift; sourceTree = "<group>"; };
+		3D33C6F52490AA07008FC368 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3D3D43A62490C8A3005E41CD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		860C181FA1C3CEC75834D2D7 /* Pods-PatienceToMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatienceToMoneyTests.release.xcconfig"; path = "Target Support Files/Pods-PatienceToMoneyTests/Pods-PatienceToMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2667EFA28FEA2FA6500B422 /* Pods-PatienceToMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatienceToMoney.debug.xcconfig"; path = "Target Support Files/Pods-PatienceToMoney/Pods-PatienceToMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		D0B38338CFD423CB2E884E9C /* Pods_PatienceToMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatienceToMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A7CB91E4889329D1BF55E2 /* Pods-PatienceToMoneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatienceToMoneyTests.debug.xcconfig"; path = "Target Support Files/Pods-PatienceToMoneyTests/Pods-PatienceToMoneyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE98C5EAB56F058A817E12E9 /* Pods-PatienceToMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatienceToMoney.release.xcconfig"; path = "Target Support Files/Pods-PatienceToMoney/Pods-PatienceToMoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191C781B50BBD8A6ED0FDE71 /* Pods_PatienceToMoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AEC639CC8A11AB8C404135 /* Pods_PatienceToMoneyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +88,8 @@
 				3D33C6C8248FB7A0008FC368 /* PatienceToMoney */,
 				3D33C6DF248FB7A1008FC368 /* PatienceToMoneyTests */,
 				3D33C6C7248FB7A0008FC368 /* Products */,
+				AB4B6C39037C272B23EE57DD /* Pods */,
+				7406E9956E9B14AD7B0FE0A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,12 +106,19 @@
 			isa = PBXGroup;
 			children = (
 				3D33C6C9248FB7A0008FC368 /* AppDelegate.swift */,
+				3D3D43A62490C8A3005E41CD /* EditViewController.swift */,
+				3D33C6ED248FB97C008FC368 /* Firebase.swift */,
 				3D33C6CB248FB7A0008FC368 /* SceneDelegate.swift */,
 				3D33C6CD248FB7A0008FC368 /* ViewController.swift */,
 				3D33C6CF248FB7A0008FC368 /* Main.storyboard */,
 				3D33C6D2248FB7A1008FC368 /* Assets.xcassets */,
 				3D33C6D4248FB7A1008FC368 /* LaunchScreen.storyboard */,
 				3D33C6D7248FB7A1008FC368 /* Info.plist */,
+				3D33C6EB248FB8FE008FC368 /* IndexViewController.swift */,
+				3D33C6EF248FBA7C008FC368 /* GoogleService-Info.plist */,
+				3D33C6F1248FCD44008FC368 /* InputViewController.swift */,
+				3D33C6F3248FD084008FC368 /* Patiences.swift */,
+				3D33C6F52490AA07008FC368 /* DetailViewController.swift */,
 			);
 			path = PatienceToMoney;
 			sourceTree = "<group>";
@@ -99,6 +132,26 @@
 			path = PatienceToMoneyTests;
 			sourceTree = "<group>";
 		};
+		7406E9956E9B14AD7B0FE0A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0B38338CFD423CB2E884E9C /* Pods_PatienceToMoney.framework */,
+				2FD54BEA98A35BD6715142D4 /* Pods_PatienceToMoneyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB4B6C39037C272B23EE57DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2667EFA28FEA2FA6500B422 /* Pods-PatienceToMoney.debug.xcconfig */,
+				DE98C5EAB56F058A817E12E9 /* Pods-PatienceToMoney.release.xcconfig */,
+				D4A7CB91E4889329D1BF55E2 /* Pods-PatienceToMoneyTests.debug.xcconfig */,
+				860C181FA1C3CEC75834D2D7 /* Pods-PatienceToMoneyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D33C6E5248FB7A1008FC368 /* Build configuration list for PBXNativeTarget "PatienceToMoney" */;
 			buildPhases = (
+				5F4AD21F3037159745D8083B /* [CP] Check Pods Manifest.lock */,
 				3D33C6C2248FB7A0008FC368 /* Sources */,
 				3D33C6C3248FB7A0008FC368 /* Frameworks */,
 				3D33C6C4248FB7A0008FC368 /* Resources */,
+				F92C0CF520466E4784EFF5B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D33C6E8248FB7A1008FC368 /* Build configuration list for PBXNativeTarget "PatienceToMoneyTests" */;
 			buildPhases = (
+				7279D6A1F9EAF4E1F4A0CAA2 /* [CP] Check Pods Manifest.lock */,
 				3D33C6D8248FB7A1008FC368 /* Sources */,
 				3D33C6D9248FB7A1008FC368 /* Frameworks */,
 				3D33C6DA248FB7A1008FC368 /* Resources */,
@@ -181,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D33C6D6248FB7A1008FC368 /* LaunchScreen.storyboard in Resources */,
+				3D33C6F0248FBA7C008FC368 /* GoogleService-Info.plist in Resources */,
 				3D33C6D3248FB7A1008FC368 /* Assets.xcassets in Resources */,
 				3D33C6D1248FB7A0008FC368 /* Main.storyboard in Resources */,
 			);
@@ -195,14 +252,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F4AD21F3037159745D8083B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PatienceToMoney-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7279D6A1F9EAF4E1F4A0CAA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PatienceToMoneyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F92C0CF520466E4784EFF5B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PatienceToMoney/Pods-PatienceToMoney-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PatienceToMoney/Pods-PatienceToMoney-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PatienceToMoney/Pods-PatienceToMoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D33C6C2248FB7A0008FC368 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D33C6EE248FB97C008FC368 /* Firebase.swift in Sources */,
 				3D33C6CE248FB7A0008FC368 /* ViewController.swift in Sources */,
 				3D33C6CA248FB7A0008FC368 /* AppDelegate.swift in Sources */,
+				3D33C6F4248FD084008FC368 /* Patiences.swift in Sources */,
+				3D33C6F2248FCD44008FC368 /* InputViewController.swift in Sources */,
 				3D33C6CC248FB7A0008FC368 /* SceneDelegate.swift in Sources */,
+				3D33C6EC248FB8FE008FC368 /* IndexViewController.swift in Sources */,
+				3D33C6F62490AA07008FC368 /* DetailViewController.swift in Sources */,
+				3D3D43A72490C8A3005E41CD /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +487,13 @@
 		};
 		3D33C6E6248FB7A1008FC368 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2667EFA28FEA2FA6500B422 /* Pods-PatienceToMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87QA297FUT;
 				INFOPLIST_FILE = PatienceToMoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,11 +507,13 @@
 		};
 		3D33C6E7248FB7A1008FC368 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE98C5EAB56F058A817E12E9 /* Pods-PatienceToMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87QA297FUT;
 				INFOPLIST_FILE = PatienceToMoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +527,7 @@
 		};
 		3D33C6E9248FB7A1008FC368 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A7CB91E4889329D1BF55E2 /* Pods-PatienceToMoneyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +550,7 @@
 		};
 		3D33C6EA248FB7A1008FC368 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 860C181FA1C3CEC75834D2D7 /* Pods-PatienceToMoneyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
