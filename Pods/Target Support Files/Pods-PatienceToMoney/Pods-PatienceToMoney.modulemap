@@ -1,0 +1,6 @@
+framework module Pods_PatienceToMoney {
+  umbrella header "Pods-PatienceToMoney-umbrella.h"
+
+  export *
+  module * { export * }
+}
