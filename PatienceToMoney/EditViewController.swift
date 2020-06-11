@@ -56,31 +56,24 @@ class EditViewController: UIViewController,UITextFieldDelegate {
         if titleTextField.text == ""||moneyTextField.text == ""{
         editButton.isEnabled = false
         }else{
+        editButton.isEnabled = true
+        }
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
-        editButton.isEnabled = true
-        }
         return true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if titleTextField.text == ""||moneyTextField.text == ""{
         editButton.isEnabled = false
         }else{
+
+        editButton.isEnabled = true
+        }
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
-        editButton.isEnabled = true
-        }
     }
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if titleTextField.text == nil||moneyTextField.text == nil {
-            editButton.isEnabled = false
-            print("ボタンは使えません！")
-            
-        }else{
-            editButton.isEnabled = true
-        }
-    }
+
 
 }
