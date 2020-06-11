@@ -22,6 +22,8 @@
 		3D33C6F4248FD084008FC368 /* Patiences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6F3248FD084008FC368 /* Patiences.swift */; };
 		3D33C6F62490AA07008FC368 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33C6F52490AA07008FC368 /* DetailViewController.swift */; };
 		3D3D43A72490C8A3005E41CD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D43A62490C8A3005E41CD /* EditViewController.swift */; };
+		3D6E1D742492C4F10071377F /* PatiencesHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E1D732492C4F10071377F /* PatiencesHistoryViewController.swift */; };
+		3D6E1D762492C5120071377F /* PatiencesHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E1D752492C5120071377F /* PatiencesHistory.swift */; };
 		D2AEC639CC8A11AB8C404135 /* Pods_PatienceToMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD54BEA98A35BD6715142D4 /* Pods_PatienceToMoneyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		3D33C6F3248FD084008FC368 /* Patiences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patiences.swift; sourceTree = "<group>"; };
 		3D33C6F52490AA07008FC368 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3D3D43A62490C8A3005E41CD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		3D6E1D732492C4F10071377F /* PatiencesHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatiencesHistoryViewController.swift; sourceTree = "<group>"; };
+		3D6E1D752492C5120071377F /* PatiencesHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatiencesHistory.swift; sourceTree = "<group>"; };
 		860C181FA1C3CEC75834D2D7 /* Pods-PatienceToMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatienceToMoneyTests.release.xcconfig"; path = "Target Support Files/Pods-PatienceToMoneyTests/Pods-PatienceToMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2667EFA28FEA2FA6500B422 /* Pods-PatienceToMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatienceToMoney.debug.xcconfig"; path = "Target Support Files/Pods-PatienceToMoney/Pods-PatienceToMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		D0B38338CFD423CB2E884E9C /* Pods_PatienceToMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatienceToMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +123,8 @@
 				3D33C6F1248FCD44008FC368 /* InputViewController.swift */,
 				3D33C6F3248FD084008FC368 /* Patiences.swift */,
 				3D33C6F52490AA07008FC368 /* DetailViewController.swift */,
+				3D6E1D732492C4F10071377F /* PatiencesHistoryViewController.swift */,
+				3D6E1D752492C5120071377F /* PatiencesHistory.swift */,
 			);
 			path = PatienceToMoney;
 			sourceTree = "<group>";
@@ -324,11 +330,13 @@
 				3D33C6EE248FB97C008FC368 /* Firebase.swift in Sources */,
 				3D33C6CE248FB7A0008FC368 /* ViewController.swift in Sources */,
 				3D33C6CA248FB7A0008FC368 /* AppDelegate.swift in Sources */,
+				3D6E1D762492C5120071377F /* PatiencesHistory.swift in Sources */,
 				3D33C6F4248FD084008FC368 /* Patiences.swift in Sources */,
 				3D33C6F2248FCD44008FC368 /* InputViewController.swift in Sources */,
 				3D33C6CC248FB7A0008FC368 /* SceneDelegate.swift in Sources */,
 				3D33C6EC248FB8FE008FC368 /* IndexViewController.swift in Sources */,
 				3D33C6F62490AA07008FC368 /* DetailViewController.swift in Sources */,
+				3D6E1D742492C4F10071377F /* PatiencesHistoryViewController.swift in Sources */,
 				3D3D43A72490C8A3005E41CD /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -51,6 +51,8 @@ class DetailViewController: UIViewController {
         
         self.delegate?.didAdded(sumMoney: resultMoney)
         
+        addPatience()
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -65,16 +67,22 @@ class DetailViewController: UIViewController {
         editVC.descriptionString = descriptionString
         editVC.documentId = documentIdString
     }
+    
+    func addPatience(){
+        let dt = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options:0, locale:Locale(identifier: "ja_JP"))
+        let data = ["title":titleString,"money":moneyString,"description":descriptionString,"created_at":dateFormatter.string(from: dt),"uid":Auth.auth().currentUser!.uid]
+        let db = Firestore.firestore()
+        db.collection("patiencesHistory").addDocument(data: data)
+    }
 
     
     @IBAction func deletePatient(_ sender: Any) {
         let db = Firestore.firestore()
         let ref:DocumentReference? = nil
-        print("DB入ります")
         db.collection("patients").document(documentIdString).delete(completion: { (error) in
             if error != nil {
-                print(error)
-                print("エラーが発生しました")
             }else{
                 let indexVC = self.storyboard?.instantiateViewController(withIdentifier: "index") as! IndexViewController
                 indexVC.modalPresentationStyle = .fullScreen
@@ -83,5 +91,6 @@ class DetailViewController: UIViewController {
             }
         })
     }
+    
     
 }

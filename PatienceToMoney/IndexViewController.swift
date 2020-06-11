@@ -15,7 +15,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     let db = Firestore.firestore()
     var sumMoneyString = "0"
     var titleString = String()
-    var moneyString = String()
+    var money = String()
     var descriptionString = String()
     var documentIdString = String()
     var patientsArray = [Patiences]()
@@ -67,7 +67,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         titleString = patientsArray[indexPath.row].title
-        moneyString = patientsArray[indexPath.row].money
+        money = patientsArray[indexPath.row].money
         documentIdString = documentIdArray[indexPath.row] as! String
         descriptionString = patientsArray[indexPath.row].description
         performSegue(withIdentifier: "toDetail", sender: nil)
@@ -78,7 +78,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         detailVC.delegate = self
         detailVC.titleString = titleString
         detailVC.descriptionString = descriptionString
-        detailVC.moneyString = moneyString
+        detailVC.moneyString = money
         print(detailVC.moneyString)
         detailVC.sumMoneyString = sumMoneyLabel.text!
         detailVC.documentIdString = documentIdString
@@ -112,6 +112,11 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         present(inputVC!, animated: true, completion: nil)
     }
     
+    @IBAction func lookHistory(_ sender: Any) {
+        let historyVC = self.storyboard?.instantiateViewController(identifier: "history") as! PatiencesHistoryViewController
+        historyVC.modalPresentationStyle = .fullScreen
+        present(historyVC, animated: true, completion: nil)
+    }
     
 
     /*
