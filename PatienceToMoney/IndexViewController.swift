@@ -15,7 +15,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     let db = Firestore.firestore()
     var sumMoneyString = "0"
     var titleString = String()
-    var money = Int()
+    var moneyString = String()
     var descriptionString = String()
     var documentIdString = String()
     var patientsArray = [Patiences]()
@@ -44,6 +44,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         tableView.reloadData()
         
     }
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -58,7 +59,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let documentId = documentIdArray[indexPath.row]
         let description = patientsArray[indexPath.row].description
         titleCell.text = patientsArray[indexPath.row].title
-        moneyCell.text =  String(patientsArray[indexPath.row].money)
+        moneyCell.text =  patientsArray[indexPath.row].money
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -66,7 +67,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         titleString = patientsArray[indexPath.row].title
-        money = patientsArray[indexPath.row].money
+        moneyString = patientsArray[indexPath.row].money
         documentIdString = documentIdArray[indexPath.row] as! String
         descriptionString = patientsArray[indexPath.row].description
         performSegue(withIdentifier: "toDetail", sender: nil)
@@ -77,7 +78,8 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         detailVC.delegate = self
         detailVC.titleString = titleString
         detailVC.descriptionString = descriptionString
-        detailVC.moneyString = String(money)
+        detailVC.moneyString = moneyString
+        print(detailVC.moneyString)
         detailVC.sumMoneyString = sumMoneyLabel.text!
         detailVC.documentIdString = documentIdString
     }
@@ -91,8 +93,10 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 let title = document.data()["title"]
                 let money = document.data()["money"]
                 let description = document.data()["description"]
-                self.patientsArray.append(Patiences(title: title as! String, money: money as! Int, description: description as! String))
-            }
+                self.patientsArray.append(Patiences(title: title as! String, money: money as! String, description: description as! String))
+                }
+            
+            
             
             self.tableView.reloadData()
         }

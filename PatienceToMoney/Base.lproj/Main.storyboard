@@ -324,6 +324,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionTextField" destination="cRv-dI-ycT" id="8jb-Q2-CTd"/>
+                        <outlet property="editButton" destination="9iV-BH-anF" id="6Up-yM-QPw"/>
                         <outlet property="moneyTextField" destination="USd-Cn-ZAH" id="b9y-7u-qpA"/>
                         <outlet property="titleTextField" destination="V7r-WW-kiJ" id="TId-WE-0Vh"/>
                     </connections>
@@ -378,7 +379,8 @@
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="登録"/>
                                 <connections>
-                                    <action selector="register:" destination="6iS-xb-5o7" eventType="touchUpInside" id="PUI-3e-exa"/>
+                                    <action selector="register:" destination="6iS-xb-5o7" eventType="editingChanged" id="8a5-xI-gVz"/>
+                                    <action selector="register:" destination="6iS-xb-5o7" eventType="touchUpInside" id="rC5-c3-Qmm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我慢項目と貯金額を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ze-9j-4vK">
@@ -395,12 +397,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcA-8c-cYI">
+                                <rect key="frame" x="40" y="396" width="297" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93560725450000004" green="0.8780649304" blue="0.65486347680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="FOq-4R-f1f"/>
                     </view>
                     <connections>
+                        <outlet property="alertLabel" destination="EcA-8c-cYI" id="rp0-4x-Ydw"/>
                         <outlet property="descriptionTextField" destination="GSz-jm-h2d" id="lsA-2K-OfU"/>
+                        <outlet property="inputButton" destination="OYK-7O-5pS" id="1kY-e0-yO9"/>
                         <outlet property="moneyTextField" destination="FCG-hs-sOd" id="tBN-Ik-7nU"/>
                         <outlet property="titleTextField" destination="gkL-bZ-yob" id="Bbo-Ga-hwT"/>
                     </connections>

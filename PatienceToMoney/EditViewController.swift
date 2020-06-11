@@ -3,7 +3,7 @@
 //  PatienceToMoney
 //
 //  Created by 松山響也 on 2020/06/10.
-//  Copyright © 2020 Kyoya Matsuyama. All rights reserved.
+//  Copyright © 2020 Kyoya Matsuyama. All rights reserved
 //
 
 import UIKit
@@ -17,6 +17,8 @@ class EditViewController: UIViewController,UITextFieldDelegate {
     var moneyString = String()
     var descriptionString = String()
     var documentId = String()
+    
+    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var moneyTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -31,7 +33,7 @@ class EditViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func edit(_ sender: Any) {
         let title = titleTextField.text
-        let money = Int(moneyTextField.text!)
+        let money = moneyTextField.text!
         let description = descriptionTextField.text
         let data = ["title":title,"money":money,"description":description] as [String : Any]
         var ref: DocumentReference? = nil
@@ -51,15 +53,34 @@ class EditViewController: UIViewController,UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if titleTextField.text == ""||moneyTextField.text == ""{
+        editButton.isEnabled = false
+        }else{
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
+        editButton.isEnabled = true
+        }
         return true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if titleTextField.text == ""||moneyTextField.text == ""{
+        editButton.isEnabled = false
+        }else{
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
+        editButton.isEnabled = true
+        }
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if titleTextField.text == nil||moneyTextField.text == nil {
+            editButton.isEnabled = false
+            print("ボタンは使えません！")
+            
+        }else{
+            editButton.isEnabled = true
+        }
     }
 
 }

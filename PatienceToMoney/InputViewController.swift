@@ -16,34 +16,40 @@ class InputViewController: UIViewController,UITextFieldDelegate {
 
     let firebase = Firebase()
     var uid = String()
+    @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var moneyTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var inputButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         uid = Auth.auth().currentUser!.uid
         moneyTextField.keyboardType = UIKeyboardType.numberPad
 
         // Do any additional setup after loading the view.
     }
     
+
     @IBAction func register(_ sender: Any) {
-    
-        let title = titleTextField.text!
-        let money = Int(moneyTextField.text!)
-        let descriotionString = descriptionTextField.text!
-        
-        insertData(title: title, money: money!, description:descriotionString, uid:uid )
-        
-        let indexVC = (self.storyboard?.instantiateViewController(identifier: "index"))! as IndexViewController
-        indexVC.modalPresentationStyle = .fullScreen
-        present(indexVC, animated: true, completion: nil)
-        
-        
-        
+        if titleTextField.text == ""||moneyTextField.text == ""{
+            inputButton.isEnabled = false
+            alertLabel.text = "タイトルと貯金額は必須項目です"
+        }else{
+            print("ボタンが")
+            let title = titleTextField.text!
+            let money = moneyTextField.text!
+            let descriotionString = descriptionTextField.text!
+            
+            insertData(title: title, money: money, description:descriotionString, uid:uid )
+            
+            let indexVC = (self.storyboard?.instantiateViewController(identifier: "index"))! as IndexViewController
+            indexVC.modalPresentationStyle = .fullScreen
+            present(indexVC, animated: true, completion: nil)
+        }
+
     }
-    func insertData(title:String,money:Int,description:String,uid:String) {
+    
+    func insertData(title:String,money:String,description:String,uid:String) {
         var ref: DocumentReference? = nil
         ref = db.collection("patients").addDocument(data: ["title": title,"money":money,"description":description,"uid":uid]){ err in
             if let err = err {
@@ -57,16 +63,25 @@ class InputViewController: UIViewController,UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if titleTextField.text == ""||moneyTextField.text == ""{
+        inputButton.isEnabled = false
+        }else{
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
+        inputButton.isEnabled = true
+        }
         return true
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {        if titleTextField.text == ""||moneyTextField.text == ""{
+        inputButton.isEnabled = false
+        }else{
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
+        inputButton.isEnabled = true
+        }
     }
 
     /*
