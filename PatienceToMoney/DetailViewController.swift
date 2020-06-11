@@ -74,8 +74,9 @@ class DetailViewController: UIViewController {
                 print(error)
                 print("エラーが発生しました")
             }else{
-                
-                self.dismiss(animated: true, completion: nil)
+                let indexVC = self.storyboard?.instantiateViewController(withIdentifier: "index") as! IndexViewController
+                indexVC.modalPresentationStyle = .fullScreen
+                self.present(indexVC, animated: true, completion: nil)
                 
             }
         })

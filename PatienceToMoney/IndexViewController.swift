@@ -38,9 +38,10 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         fetchData(uid: uid)
         
     }
+
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
+        super.viewWillAppear(animated)
+        tableView.reloadData()
         
     }
     

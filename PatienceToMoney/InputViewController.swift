@@ -37,6 +37,7 @@ class InputViewController: UIViewController,UITextFieldDelegate {
         insertData(title: title, money: money!, description:descriotionString, uid:uid )
         
         let indexVC = (self.storyboard?.instantiateViewController(identifier: "index"))! as IndexViewController
+        indexVC.modalPresentationStyle = .fullScreen
         present(indexVC, animated: true, completion: nil)
         
         

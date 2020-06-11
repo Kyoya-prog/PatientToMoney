@@ -137,7 +137,7 @@
                     <connections>
                         <outlet property="sumMoneyLabel" destination="HLb-Be-9qw" id="J8H-5n-Dy0"/>
                         <outlet property="tableView" destination="h4D-k6-ZXw" id="2ZF-JE-StS"/>
-                        <segue destination="lRZ-4I-xCB" kind="show" identifier="toDetail" id="pwY-XY-7eh"/>
+                        <segue destination="lRZ-4I-xCB" kind="presentation" identifier="toDetail" modalPresentationStyle="fullScreen" id="pwY-XY-7eh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEY-d1-Qqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -149,7 +149,7 @@
             <objects>
                 <viewController storyboardIdentifier="detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lRZ-4I-xCB" customClass="DetailViewController" customModule="PatienceToMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UIk-ab-h0C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-SF-vYM">

@@ -44,6 +44,7 @@ class EditViewController: UIViewController,UITextFieldDelegate {
             }
         }
         let indexVC = self.storyboard?.instantiateViewController(identifier: "index") as! IndexViewController
+        indexVC.modalPresentationStyle = .fullScreen
         present(indexVC, animated: true, completion: nil)
 
         
