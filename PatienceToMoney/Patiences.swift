@@ -11,11 +11,11 @@ import Foundation
 class Patiences{
     
     var title = String()
-    var money = Int()
+    var money = String()
     var description = String()
     var childId:String?
     
-    init(title:String,money:Int,description:String){
+    init(title:String,money:String,description:String){
         self.title = title
         self.money = money
         self.description = description

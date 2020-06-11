@@ -34,6 +34,8 @@ class DetailViewController: UIViewController {
         moneyLabel.text = moneyString
         descriptionLabel.text = descriptionString
         sumMoneyLabel.text = sumMoneyString
+        print(moneyLabel.text)
+        print("確認")
 
         // Do any additional setup after loading the view.
     }
@@ -41,9 +43,9 @@ class DetailViewController: UIViewController {
     @IBAction func patient(_ sender: Any) {
         var resultMoney = Int(sumMoneyString)!
         
-        var patientMoney = Int(moneyString)
+        let patientMoney = Int(moneyLabel.text!)!
         
-        resultMoney = resultMoney + patientMoney!
+        resultMoney = resultMoney + patientMoney
         
         sumMoneyLabel.text = String(resultMoney)
         
