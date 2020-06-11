@@ -66,22 +66,24 @@ class InputViewController: UIViewController,UITextFieldDelegate {
         if titleTextField.text == ""||moneyTextField.text == ""{
         inputButton.isEnabled = false
         }else{
+
+        inputButton.isEnabled = true
+        }
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
-        inputButton.isEnabled = true
-        }
         return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {        if titleTextField.text == ""||moneyTextField.text == ""{
         inputButton.isEnabled = false
         }else{
+
+        inputButton.isEnabled = true
+        }
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
-        inputButton.isEnabled = true
-        }
     }
 
     /*
