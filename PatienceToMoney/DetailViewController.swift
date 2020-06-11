@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+
 protocol DetailViewControllerDelegate{
     func didAdded(sumMoney:Int)
 }
@@ -61,14 +64,21 @@ class DetailViewController: UIViewController {
         editVC.documentId = documentIdString
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func deletePatient(_ sender: Any) {
+        let db = Firestore.firestore()
+        let ref:DocumentReference? = nil
+        print("DB入ります")
+        db.collection("patients").document(documentIdString).delete(completion: { (error) in
+            if error != nil {
+                print(error)
+                print("エラーが発生しました")
+            }else{
+                
+                self.dismiss(animated: true, completion: nil)
+                
+            }
+        })
     }
-    */
-
+    
 }
