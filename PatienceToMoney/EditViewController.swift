@@ -3,7 +3,7 @@
 //  PatienceToMoney
 //
 //  Created by 松山響也 on 2020/06/10.
-//  Copyright © 2020 Kyoya Matsuyama. All rights reserved.
+//  Copyright © 2020 Kyoya Matsuyama. All rights reserved
 //
 
 import UIKit
