@@ -75,9 +75,5 @@ class DetailViewController: UIViewController {
         let data = ["title":titleString,"money":moneyString,"description":descriptionString,"created_at":dateFormatter.string(from: dt),"uid":Auth.auth().currentUser!.uid]
         let db = Firestore.firestore()
         db.collection("patiencesHistory").addDocument(data: data)
-    }
-    
-
-    
-    
+    }  
 }
