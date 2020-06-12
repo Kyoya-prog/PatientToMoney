@@ -10,15 +10,14 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,DetailViewControllerDelegate {
+class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
     let db = Firestore.firestore()
-    var sumMoneyString = "0"
     var titleString = String()
-    var money = String()
+    var moneyString = String()
     var descriptionString = String()
     var documentIdString = String()
-    var patientsArray = [Patiences]()
+    var patiencesArray = [Patiences]()
     var documentIdArray:[Any] = []
     let uid = Auth.auth().currentUser!.uid
     
@@ -32,80 +31,78 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         }else{
             sumMoneyLabel.text = "0"
         }
-        
+        fetchData(uid: uid)
+        tableView.reloadData()
         tableView.delegate = self
         tableView.dataSource = self
-        fetchData(uid: uid)
         
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if let sumMoney = UserDefaults.standard.object(forKey: "sumMoney"){
+            sumMoneyLabel.text = sumMoney as? String
+        }else{
+            sumMoneyLabel.text = "0"
+        }
         tableView.reloadData()
-        
     }
 
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return patientsArray.count
+        return patiencesArray.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         let titleCell = cell?.viewWithTag(1) as! UILabel
         let moneyCell = cell?.viewWithTag(2) as! UILabel
         let documentId = documentIdArray[indexPath.row]
-        let description = patientsArray[indexPath.row].description
-        titleCell.text = patientsArray[indexPath.row].title
-        moneyCell.text =  patientsArray[indexPath.row].money
+        let description = patiencesArray[indexPath.row].description
+        titleCell.text = patiencesArray[indexPath.row].title
+        moneyCell.text =  patiencesArray[indexPath.row].money
         return cell!
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 72
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        titleString = patientsArray[indexPath.row].title
-        money = patientsArray[indexPath.row].money
+        titleString = patiencesArray[indexPath.row].title
+        moneyString = patiencesArray[indexPath.row].money
         documentIdString = documentIdArray[indexPath.row] as! String
-        descriptionString = patientsArray[indexPath.row].description
+        descriptionString = patiencesArray[indexPath.row].description
         performSegue(withIdentifier: "toDetail", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! DetailViewController
-        detailVC.delegate = self
         detailVC.titleString = titleString
         detailVC.descriptionString = descriptionString
-        detailVC.moneyString = money
+        detailVC.moneyString = moneyString
         print(detailVC.moneyString)
         detailVC.sumMoneyString = sumMoneyLabel.text!
         detailVC.documentIdString = documentIdString
     }
-    
-    
+
     func fetchData(uid:String){
-        let docRef = db.collection("patients")
+        let docRef = db.collection("patiences")
         docRef.whereField("uid", isEqualTo: uid).getDocuments { (QuerySnapshot, err) in
             for document in QuerySnapshot!.documents {
                 self.documentIdArray.append(document.documentID)
                 let title = document.data()["title"]
                 let money = document.data()["money"]
                 let description = document.data()["description"]
-                self.patientsArray.append(Patiences(title: title as! String, money: money as! String, description: description as! String))
+                self.patiencesArray.append(Patiences(title: title as! String, money: money as! String, description: description as! String))
                 }
-            
-            
-            
             self.tableView.reloadData()
         }
        }
-    
-    func didAdded(sumMoney: Int) {
-        sumMoneyLabel.text = String(sumMoney)
-        UserDefaults.standard.set(String(sumMoney), forKey: "sumMoney")
-    }
     
     @IBAction func create(_ sender: Any) {
         let inputVC = self.storyboard?.instantiateViewController(withIdentifier: "input")

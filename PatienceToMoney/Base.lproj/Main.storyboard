@@ -251,7 +251,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="patient:" destination="lRZ-4I-xCB" eventType="touchUpInside" id="eF2-4T-lk6"/>
+                                    <action selector="patience:" destination="lRZ-4I-xCB" eventType="touchUpInside" id="Bwl-VR-jsU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計貯金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dz-MS-kT4">
@@ -302,7 +302,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="deletePatient:" destination="lRZ-4I-xCB" eventType="touchUpInside" id="CNy-1u-uvk"/>
+                                    <action selector="deletePatience:" destination="lRZ-4I-xCB" eventType="touchUpInside" id="4bi-4y-Sro"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="円" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zg-ST-wxW">

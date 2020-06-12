@@ -37,7 +37,7 @@ class EditViewController: UIViewController,UITextFieldDelegate {
         let description = descriptionTextField.text
         let data = ["title":title,"money":money,"description":description] as [String : Any]
         var ref: DocumentReference? = nil
-        ref = db.collection("patients").document("\(documentId)")
+        ref = db.collection("patiences").document("\(documentId)")
         ref?.updateData(data as [AnyHashable : Any]){ err in
             if let err = err {
                 print("Error updating document: \(err)")

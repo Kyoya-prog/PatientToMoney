@@ -51,7 +51,7 @@ class InputViewController: UIViewController,UITextFieldDelegate {
     
     func insertData(title:String,money:String,description:String,uid:String) {
         var ref: DocumentReference? = nil
-        ref = db.collection("patients").addDocument(data: ["title": title,"money":money,"description":description,"uid":uid]){ err in
+        ref = db.collection("patiences").addDocument(data: ["title": title,"money":money,"description":description,"uid":uid]){ err in
             if let err = err {
                 print("Error adding document: \(err)")
                 print("失敗しました！")
