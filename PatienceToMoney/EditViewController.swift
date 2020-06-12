@@ -16,7 +16,7 @@ class EditViewController: UIViewController,UITextFieldDelegate {
     var titleString = String()
     var moneyString = String()
     var descriptionString = String()
-    var documentId = String()
+    var documentIdString = String()
     
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var titleTextField: UITextField!
@@ -28,7 +28,6 @@ class EditViewController: UIViewController,UITextFieldDelegate {
         moneyTextField.text = moneyString
         descriptionTextField.text = descriptionString
         moneyTextField.keyboardType = UIKeyboardType.numberPad
-
     }
     
     @IBAction func edit(_ sender: Any) {
@@ -37,7 +36,7 @@ class EditViewController: UIViewController,UITextFieldDelegate {
         let description = descriptionTextField.text
         let data = ["title":title,"money":money,"description":description] as [String : Any]
         var ref: DocumentReference? = nil
-        ref = db.collection("patients").document("\(documentId)")
+        ref = db.collection("patiences").document("\(documentIdString)")
         ref?.updateData(data as [AnyHashable : Any]){ err in
             if let err = err {
                 print("Error updating document: \(err)")
@@ -48,27 +47,26 @@ class EditViewController: UIViewController,UITextFieldDelegate {
         let indexVC = self.storyboard?.instantiateViewController(identifier: "index") as! IndexViewController
         indexVC.modalPresentationStyle = .fullScreen
         present(indexVC, animated: true, completion: nil)
-
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if titleTextField.text == ""||moneyTextField.text == ""{
-        editButton.isEnabled = false
+            editButton.isEnabled = false
         }else{
-        editButton.isEnabled = true
+            editButton.isEnabled = true
         }
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
         descriptionTextField.resignFirstResponder()
         return true
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if titleTextField.text == ""||moneyTextField.text == ""{
-        editButton.isEnabled = false
+            editButton.isEnabled = false
         }else{
 
-        editButton.isEnabled = true
+            editButton.isEnabled = true
         }
         titleTextField.resignFirstResponder()
         moneyTextField.resignFirstResponder()
