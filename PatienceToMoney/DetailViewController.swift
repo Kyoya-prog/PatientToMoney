@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
     var descriptionString = String()
     var sumMoneyString = String()
     var documentIdString = String()
+    
     @IBOutlet weak var sumMoneyLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!

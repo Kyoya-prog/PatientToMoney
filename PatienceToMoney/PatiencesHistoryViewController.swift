@@ -19,23 +19,25 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
     var moneyString = String()
     var created_atString = String()
     var documentIdOfPatiencesHistoryArray:[Any] = []
-    
     var uid = Auth.auth().currentUser!.uid
     var patiencesHistoryArray = [PatienceHistory]()
+    
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          fetchData(uid: uid)
-        
         print(documentIdOfPatiencesHistoryArray.count)
-        
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return patiencesHistoryArray.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         let titleCell = cell?.viewWithTag(1) as! UILabel
@@ -46,6 +48,7 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
         created_atCell.text = "\(patiencesHistoryArray[indexPath.row].created_at)"
         return cell!
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
@@ -63,14 +66,21 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
                     self.tableView.deleteRows(at: [indexPath], with: .fade)
                 }
             }
-
-            
         }
-        
-        
+    }
+
+    @IBAction func backToIndex(_ sender: Any) {
+        let indexVC = self.storyboard?.instantiateViewController(identifier: "index") as! IndexViewController
         
     }
     
+    func didDelete(money:String){
+        let sumMoney = UserDefaults.standard.object(forKey: "sumMoney") as! NSString
+        resultMoney = Int(sumMoney as String)!
+        let minusMoney = Int(money)
+        resultMoney = resultMoney - minusMoney!
+        UserDefaults.standard.set("\(resultMoney)", forKey: "sumMoney")
+       }
     
     func fetchData(uid:String){
         let db = Firestore.firestore()
@@ -82,27 +92,10 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
                  let money = document.data()["money"]
                  let created_at = document.data()["created_at"] as! String
                     self.patiencesHistoryArray.append(PatienceHistory(title: title as! String, money: money as! String, created_at: created_at, uid: self.uid))
-                
                     self.tableView.delegate = self
                     self.tableView.dataSource = self
-                    
                     self.tableView.reloadData()
             }
         }
     }
-
-    func didDelete(money:String){
-        let sumMoney = UserDefaults.standard.object(forKey: "sumMoney") as! NSString
-        resultMoney = Int(sumMoney as String)!
-        let minusMoney = Int(money)
-        resultMoney = resultMoney - minusMoney!
-        UserDefaults.standard.set("\(resultMoney)", forKey: "sumMoney")
-    }
- 
-    @IBAction func backToIndex(_ sender: Any) {
-        let indexVC = self.storyboard?.instantiateViewController(identifier: "index") as! IndexViewController
-        
-    }
-    
-    
 }
