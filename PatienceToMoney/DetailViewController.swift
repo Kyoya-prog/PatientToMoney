@@ -24,20 +24,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var sumMoney: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         titleLabel.text = titleString
         moneyLabel.text = moneyString
         descriptionLabel.text = descriptionString
         sumMoneyLabel.text = sumMoneyString
         print(moneyLabel.text)
         print("確認")
-
-        // Do any additional setup after loading the view.
     }
     
     
     @IBAction func toEdit(_ sender: Any) {
-        
         performSegue(withIdentifier:"toEdit" , sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,7 +41,7 @@ class DetailViewController: UIViewController {
         editVC.titleString = titleString
         editVC.moneyString = moneyString
         editVC.descriptionString = descriptionString
-        editVC.documentId = documentIdString
+        editVC.documentIdString = documentIdString
     }
     
     @IBAction func deletePatience(_ sender: Any) {
@@ -57,9 +53,17 @@ class DetailViewController: UIViewController {
                 let indexVC = self.storyboard?.instantiateViewController(withIdentifier: "index") as! IndexViewController
                 indexVC.modalPresentationStyle = .fullScreen
                 self.present(indexVC, animated: true, completion: nil)
-                
             }
         })
+    }
+
+    @IBAction func patience(_ sender: Any) {
+        var resultMoney = Int(sumMoneyString)!
+        let patienceMoney = Int(moneyLabel.text!)!
+        resultMoney = resultMoney + patienceMoney
+        UserDefaults.standard.set("\(resultMoney)", forKey: "sumMoney")
+        addPatience()
+        dismiss(animated: true, completion: nil)
     }
     
     func addPatience(){
@@ -70,20 +74,6 @@ class DetailViewController: UIViewController {
         let data = ["title":titleString,"money":moneyString,"description":descriptionString,"created_at":dateFormatter.string(from: dt),"uid":Auth.auth().currentUser!.uid]
         let db = Firestore.firestore()
         db.collection("patiencesHistory").addDocument(data: data)
-    }
-
-    @IBAction func patience(_ sender: Any) {
-        var resultMoney = Int(sumMoneyString)!
-           
-        let patienceMoney = Int(moneyLabel.text!)!
-           
-        resultMoney = resultMoney + patienceMoney
-           
-        UserDefaults.standard.set("\(resultMoney)", forKey: "sumMoney")
-           
-        addPatience()
-           
-        dismiss(animated: true, completion: nil)
     }
     
 
