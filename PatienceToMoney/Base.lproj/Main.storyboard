@@ -41,14 +41,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="LIS-nm-N7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Fg-gL-0Uz"/>
+                            <constraint firstAttribute="bottom" secondItem="cSR-pz-RDG" secondAttribute="bottom" id="0se-74-bSr"/>
+                            <constraint firstItem="cSR-pz-RDG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3yg-da-gKj"/>
                             <constraint firstItem="LIS-nm-N7S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="CLt-HE-8AZ"/>
                             <constraint firstItem="Tds-98-4vo" firstAttribute="centerX" secondItem="LIS-nm-N7S" secondAttribute="centerX" id="FMd-mL-JVJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LIS-nm-N7S" secondAttribute="bottom" constant="106" id="IiW-eP-sJd"/>
                             <constraint firstItem="cSR-pz-RDG" firstAttribute="trailing" secondItem="Tds-98-4vo" secondAttribute="trailing" id="JEM-S2-2ag"/>
+                            <constraint firstItem="Tds-98-4vo" firstAttribute="width" secondItem="cSR-pz-RDG" secondAttribute="width" id="azP-fg-VGM"/>
                             <constraint firstItem="cSR-pz-RDG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-88" id="eVL-Y3-GYc"/>
+                            <constraint firstItem="cSR-pz-RDG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ecM-io-qQ9"/>
                             <constraint firstItem="cSR-pz-RDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fGw-Yz-bk0"/>
                             <constraint firstItem="cSR-pz-RDG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fJA-o8-nxo"/>
                             <constraint firstItem="cSR-pz-RDG" firstAttribute="leading" secondItem="Tds-98-4vo" secondAttribute="leading" id="o9F-fq-MxJ"/>
+                            <constraint firstItem="cSR-pz-RDG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oGc-1b-ETd"/>
                             <constraint firstItem="Tds-98-4vo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qiB-yd-4us"/>
                             <constraint firstItem="Tds-98-4vo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="tge-qN-4zb"/>
                         </constraints>
