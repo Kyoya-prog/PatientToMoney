@@ -11,8 +11,6 @@ import Firebase
 import FirebaseFirestore
 
 class InputViewController: UIViewController,UITextFieldDelegate {
-    
-    let firebase = Firebase()
     var uid = String()
     
     @IBOutlet weak var alertLabel: UILabel!

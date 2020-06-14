@@ -27,7 +27,7 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
     override func viewDidLoad() {
         super.viewDidLoad()
          fetchData(uid: uid)
-        print(documentIdOfPatiencesHistoryArray.count)
+ 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,10 +55,7 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            print(self.documentIdOfPatiencesHistoryArray)
-            print(indexPath.row)
             let documentId = self.documentIdOfPatiencesHistoryArray[indexPath.row]
-            print(documentId)
             let db = Firestore.firestore()
             db.collection("patiencesHistory").document(documentId as! String).delete { (error) in
                 if error != nil{
