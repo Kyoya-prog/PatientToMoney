@@ -215,7 +215,7 @@
                     <connections>
                         <outlet property="sumMoneyLabel" destination="HLb-Be-9qw" id="J8H-5n-Dy0"/>
                         <outlet property="tableView" destination="h4D-k6-ZXw" id="2ZF-JE-StS"/>
-                        <segue destination="lRZ-4I-xCB" kind="presentation" identifier="toDetail" modalPresentationStyle="fullScreen" id="pwY-XY-7eh"/>
+                        <segue destination="lRZ-4I-xCB" kind="presentation" identifier="toDetail" modalPresentationStyle="automatic" id="pwY-XY-7eh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEY-d1-Qqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -227,29 +227,29 @@
             <objects>
                 <viewController storyboardIdentifier="detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lRZ-4I-xCB" customClass="DetailViewController" customModule="PatienceToMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UIk-ab-h0C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-SF-vYM">
-                                <rect key="frame" x="161.33333333333334" y="136" width="52.333333333333343" height="26.333333333333343"/>
+                                <rect key="frame" x="161.33333333333334" y="92" width="52.333333333333343" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="bnT-bx-hOr">
-                                <rect key="frame" x="166.66666666666666" y="403" width="41.666666666666657" height="20.333333333333314"/>
+                                <rect key="frame" x="166.66666666666666" y="359" width="41.666666666666657" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="0KO-lW-9Iz">
-                                <rect key="frame" x="166.66666666666666" y="236" width="41.666666666666657" height="20.333333333333314"/>
+                                <rect key="frame" x="166.66666666666666" y="192" width="41.666666666666657" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcU-HH-JxX">
-                                <rect key="frame" x="275" y="592" width="100" height="100"/>
+                                <rect key="frame" x="275" y="538" width="100" height="100"/>
                                 <state key="normal" image="patience">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -258,7 +258,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計貯金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Dz-MS-kT4">
-                                <rect key="frame" x="19" y="54" width="92" height="25"/>
+                                <rect key="frame" x="19" y="10" width="92" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Shy-Na-6Qs"/>
                                 </constraints>
@@ -267,7 +267,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="TTG-m8-drQ">
-                                <rect key="frame" x="256" y="54" width="77" height="25"/>
+                                <rect key="frame" x="256" y="10" width="77" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="xQa-v9-eib"/>
                                 </constraints>
@@ -276,13 +276,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xn0-SW-Q1V">
-                                <rect key="frame" x="209.33333333333334" y="236" width="82.666666666666657" height="21"/>
+                                <rect key="frame" x="209.33333333333334" y="192" width="82.666666666666657" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG0-bp-t0i">
-                                <rect key="frame" x="0.0" y="592" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="538" width="100" height="100"/>
                                 <state key="normal" image="delete">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -291,7 +291,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Zg-ST-wxW">
-                                <rect key="frame" x="341" y="54" width="17" height="25"/>
+                                <rect key="frame" x="341" y="10" width="17" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="eWh-6d-zG4"/>
                                 </constraints>
@@ -300,7 +300,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4u-Wm-4Ge">
-                                <rect key="frame" x="137.66666666666666" y="592" width="100" height="100"/>
+                                <rect key="frame" x="137.66666666666666" y="538" width="100" height="100"/>
                                 <state key="normal" image="edit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -347,7 +347,7 @@
                         <outlet property="moneyLabel" destination="0KO-lW-9Iz" id="Ep9-y3-KYE"/>
                         <outlet property="sumMoneyLabel" destination="TTG-m8-drQ" id="Emq-Qs-qhr"/>
                         <outlet property="titleLabel" destination="XXr-SF-vYM" id="QJ5-vn-AjW"/>
-                        <segue destination="gUU-hc-eVF" kind="presentation" identifier="toEdit" modalPresentationStyle="fullScreen" id="6LX-8G-lwH"/>
+                        <segue destination="gUU-hc-eVF" kind="presentation" identifier="toEdit" modalPresentationStyle="automatic" id="6LX-8G-lwH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBn-Gh-RSx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -492,7 +492,7 @@
             <objects>
                 <viewController id="gUU-hc-eVF" customClass="EditViewController" customModule="PatienceToMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sRS-rI-mWK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqw-f5-O7Y">
@@ -502,7 +502,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7r-WW-kiJ">
-                                <rect key="frame" x="137" y="120" width="222" height="35"/>
+                                <rect key="frame" x="137" y="66" width="222" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="mwP-vX-k5w"/>
                                 </constraints>
@@ -516,7 +516,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USd-Cn-ZAH">
-                                <rect key="frame" x="137" y="209" width="222" height="35"/>
+                                <rect key="frame" x="137" y="155" width="222" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="B9A-jM-aed"/>
                                 </constraints>
@@ -524,7 +524,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRv-dI-ycT">
-                                <rect key="frame" x="137" y="320" width="222" height="35"/>
+                                <rect key="frame" x="137" y="266" width="222" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="lE9-Cg-k8K"/>
                                 </constraints>
@@ -532,13 +532,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我慢項目と貯金額を編集してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyc-Dz-HK4">
-                                <rect key="frame" x="32" y="66" width="313" height="31"/>
+                                <rect key="frame" x="32" y="22" width="313" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6Q-hS-VJF">
-                                <rect key="frame" x="22" y="310" width="97" height="55"/>
+                                <rect key="frame" x="22" y="256" width="97" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="HHk-ap-XiV"/>
                                 </constraints>

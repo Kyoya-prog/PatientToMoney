@@ -11,11 +11,10 @@ target 'PatienceToMoney' do
     inherit! :search_paths
     # Pods for testing
   end
-
+	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
-	pod 'Firebase/Database'
-
+	pod 'FirebaseFirestoreSwift'
 
 end

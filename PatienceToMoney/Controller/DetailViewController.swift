@@ -29,8 +29,7 @@ class DetailViewController: UIViewController {
         moneyLabel.text = moneyString
         descriptionLabel.text = descriptionString
         sumMoneyLabel.text = sumMoneyString
-        print(moneyLabel.text)
-        print("確認")
+  
     }
     
     
@@ -78,7 +77,6 @@ class DetailViewController: UIViewController {
     }
     
     func addPatience(){
-        print("追加されています")
         let dt = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options:0, locale:Locale(identifier: "ja_JP"))
