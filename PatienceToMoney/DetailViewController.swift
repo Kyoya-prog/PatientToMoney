@@ -51,20 +51,30 @@ class DetailViewController: UIViewController {
         db.collection("patiences").document(documentIdString).delete(completion: { (error) in
             if error != nil {
             }else{
-                let indexVC = self.storyboard?.instantiateViewController(withIdentifier: "index") as! IndexViewController
-                indexVC.modalPresentationStyle = .fullScreen
-                self.present(indexVC, animated: true, completion: nil)
+                let alert:UIAlertController = UIAlertController(title: "我慢項目の削除", message: "我慢項目を削除しました！", preferredStyle: .alert)
+                let defaultAction:UIAlertAction = UIAlertAction(title: "確認", style: .default) { (UIAlertAction) in
+                    let indexVC = self.storyboard?.instantiateViewController(withIdentifier: "index") as! IndexViewController
+                    indexVC.modalPresentationStyle = .fullScreen
+                    self.present(indexVC, animated: true, completion: nil)
+                }
+                alert.addAction(defaultAction)
+                self.present(alert, animated: true, completion: nil)
             }
         })
     }
 
     @IBAction func patience(_ sender: Any) {
-        var resultMoney = Int(sumMoneyString)!
-        let patienceMoney = Int(moneyLabel.text!)!
-        resultMoney = resultMoney + patienceMoney
-        UserDefaults.standard.set("\(resultMoney)", forKey: "sumMoney")
-        addPatience()
-        dismiss(animated: true, completion: nil)
+        let alert = UIAlertController(title: "我慢", message: "貯金額に追加しました！", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "確認", style: .default) { (UIAlertAction) in
+            var resultMoney = Int(self.sumMoneyString)!
+            let patienceMoney = Int(self.moneyLabel.text!)!
+            resultMoney = resultMoney + patienceMoney
+            UserDefaults.standard.set("\(resultMoney)", forKey: "sumMoney")
+            self.addPatience()
+            self.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func addPatience(){

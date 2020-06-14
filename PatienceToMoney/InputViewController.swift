@@ -44,7 +44,7 @@ class InputViewController: UIViewController,UITextFieldDelegate {
     
     func insertData(title:String,money:String,description:String,uid:String) {
         let db = Firestore.firestore()
-        let ref = db.collection("patiences").addDocument(data: ["title": title,"money":money,"description":description,"uid":uid])
+        db.collection("patiences").addDocument(data: ["title": title,"money":money,"description":description,"uid":uid])
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
