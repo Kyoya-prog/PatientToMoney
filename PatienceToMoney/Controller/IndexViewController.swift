@@ -46,6 +46,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             sumMoneyLabel.text = "0"
         }
         tableView.reloadData()
+        print("viewwillappear")
     }
 
     
@@ -85,7 +86,6 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         detailVC.titleString = titleString
         detailVC.descriptionString = descriptionString
         detailVC.moneyString = moneyString
-        print(detailVC.moneyString)
         detailVC.sumMoneyString = sumMoneyLabel.text!
         detailVC.documentIdString = documentIdString
     }
