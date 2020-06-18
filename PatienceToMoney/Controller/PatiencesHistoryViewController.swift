@@ -14,6 +14,7 @@ protocol DidDeletePatienceDelegate{
 }
 
 class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    var activityIndicatorView = UIActivityIndicatorView()
     var resultMoney = Int()
     var titleString = String()
     var moneyString = String()
@@ -27,7 +28,11 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
     override func viewDidLoad() {
         super.viewDidLoad()
          fetchData(uid: uid)
- 
+        activityIndicatorView.center = view.center
+        activityIndicatorView.style = .large
+        activityIndicatorView.color = .purple
+        
+        view.addSubview(activityIndicatorView)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -83,6 +88,7 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
        }
     
     func fetchData(uid:String){
+        activityIndicatorView.startAnimating()
         let db = Firestore.firestore()
         let docRef = db.collection("patiencesHistory")
         docRef.whereField("uid", isEqualTo:uid).getDocuments { (QuerySnapshot, err) in
@@ -95,6 +101,7 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
                     self.tableView.delegate = self
                     self.tableView.dataSource = self
                     self.tableView.reloadData()
+                    self.activityIndicatorView.stopAnimating()
             }
         }
     }
