@@ -13,6 +13,7 @@ import FirebaseFirestore
 class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
     let db = Firestore.firestore()
+    var activityIndicatorView = UIActivityIndicatorView()
     var titleString = String()
     var moneyString = String()
     var descriptionString = String()
@@ -31,6 +32,10 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         }else{
             sumMoneyLabel.text = "0"
         }
+        activityIndicatorView.center = view.center
+        activityIndicatorView.style = .large
+        activityIndicatorView.color = .purple
+        view.addSubview(activityIndicatorView)
         fetchData(uid: uid)
         tableView.reloadData()
         tableView.delegate = self
@@ -91,6 +96,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
 
     func fetchData(uid:String){
+        activityIndicatorView.startAnimating()
         let docRef = db.collection("patiences")
         docRef.whereField("uid", isEqualTo: uid).getDocuments { (QuerySnapshot, err) in
             for document in QuerySnapshot!.documents {
@@ -99,6 +105,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 let money = document.data()["money"]
                 let description = document.data()["description"]
                 self.patiencesArray.append(Patiences(title: title as! String, money: money as! String, description: description as! String))
+                self.activityIndicatorView.stopAnimating()
                 }
             self.tableView.reloadData()
         }
