@@ -57,6 +57,7 @@
 		3D6E1D732492C4F10071377F /* PatiencesHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatiencesHistoryViewController.swift; sourceTree = "<group>"; };
 		3D6E1D752492C5120071377F /* PatiencesHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatiencesHistory.swift; sourceTree = "<group>"; };
 		3D77141E2495F61F0006922E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PatienceToMoney/View/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		3D7714222499F1630006922E /* PatientToMoneyApp (1).mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatientToMoneyApp (1).mobileprovision"; sourceTree = "<group>"; };
 		860C181FA1C3CEC75834D2D7 /* Pods-PatienceToMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatienceToMoneyTests.release.xcconfig"; path = "Target Support Files/Pods-PatienceToMoneyTests/Pods-PatienceToMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2667EFA28FEA2FA6500B422 /* Pods-PatienceToMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatienceToMoney.debug.xcconfig"; path = "Target Support Files/Pods-PatienceToMoney/Pods-PatienceToMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		D0B38338CFD423CB2E884E9C /* Pods_PatienceToMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatienceToMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +111,7 @@
 				3D77141B2495F5E10006922E /* View */,
 				3D77141D2495F5EE0006922E /* Controller */,
 				3D33C6D7248FB7A1008FC368 /* Info.plist */,
+				3D7714222499F1630006922E /* PatientToMoneyApp (1).mobileprovision */,
 				3D33C6DF248FB7A1008FC368 /* PatienceToMoneyTests */,
 				3D33C6EF248FBA7C008FC368 /* GoogleService-Info.plist */,
 			);
