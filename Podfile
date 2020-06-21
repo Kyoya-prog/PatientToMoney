@@ -16,5 +16,6 @@ target 'PatienceToMoney' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
 	pod 'FirebaseFirestoreSwift'
+	pod 'MBCircularProgressBar'
 
 end
