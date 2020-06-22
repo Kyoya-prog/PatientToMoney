@@ -27,12 +27,15 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var sumMoneyLabel: UILabel!
     @IBOutlet weak var progressBarView: MBCircularProgressBarView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         fetchData(uid: uid)
+        backButton.layer.cornerRadius = 50.0
+        
+        fetchData(uid: uid)
         activityIndicatorView.center = view.center
         activityIndicatorView.style = .large
         activityIndicatorView.color = .purple
@@ -44,6 +47,8 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
         sumMoneyLabel.text = UserDefaults.standard.object(forKey: "sumMoney") as! String
         progressBarView.progressColor = .red
         progressBarView.emptyLineColor = .darkGray
+        progressBarView.progressAngle = 100
+        progressBarView.progressLineWidth = 5
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -85,8 +90,12 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
         }
     }
 
+
+    
     @IBAction func backToIndex(_ sender: Any) {
         let indexVC = self.storyboard?.instantiateViewController(identifier: "index") as! IndexViewController
+        indexVC.modalPresentationStyle = .fullScreen
+        present(indexVC, animated: true, completion: nil)
         
     }
     
