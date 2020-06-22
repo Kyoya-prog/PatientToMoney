@@ -24,6 +24,3 @@ MBCircularProgressBar
 Kyoya Matsuyama
 
 
-
-![](play2.jpg)
-![](play1.jpg)
