@@ -23,4 +23,5 @@ MBCircularProgressBar
 【製作者】  
 Kyoya Matsuyama
 
-
+![](play1.jpg)
+![](play2.jpg)
