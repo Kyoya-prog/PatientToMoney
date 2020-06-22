@@ -36,6 +36,8 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         activityIndicatorView.style = .large
         activityIndicatorView.color = .purple
         if patiencesArray.count > 0{
+        view.addSubview(activityIndicatorView)
+        }
         fetchData(uid: uid)
         tableView.reloadData()
         tableView.delegate = self

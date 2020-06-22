@@ -39,8 +39,9 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
         activityIndicatorView.center = view.center
         activityIndicatorView.style = .large
         activityIndicatorView.color = .purple
+        if patiencesHistoryArray.count > 0{
         view.addSubview(activityIndicatorView)
-        
+        }
         sumMoney = Int(UserDefaults.standard.object(forKey: "sumMoney") as! String)!
         progressBarView.maxValue = CGFloat(100000)
         progressBarView.value = CGFloat(sumMoney)
