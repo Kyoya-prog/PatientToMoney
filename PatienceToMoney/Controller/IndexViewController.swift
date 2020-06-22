@@ -35,7 +35,9 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         activityIndicatorView.center = view.center
         activityIndicatorView.style = .large
         activityIndicatorView.color = .purple
+        if patiencesArray.count > 0{
         view.addSubview(activityIndicatorView)
+        }
         fetchData(uid: uid)
         tableView.reloadData()
         tableView.delegate = self
@@ -49,6 +51,7 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             sumMoneyLabel.text = sumMoney as? String
         }else{
             sumMoneyLabel.text = "0"
+            UserDefaults.standard.set("0", forKey: "sumMoney")
         }
         tableView.reloadData()
         print("viewwillappear")

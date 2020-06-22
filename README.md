@@ -12,16 +12,18 @@
 5.我慢項目削除機能  
 6.アラート画面の出力機能  
 ７.我慢履歴表示機能 
+8.我慢合計金額をプログレスバーで可視化 
+
   
 【使用したライブラリ】  
 Firebase Authentication  
 Firebase FireStore  
+MBCircularProgressBar 
   
 【製作者】  
 Kyoya Matsuyama
 
 
 
-![](play3.jpg)
 ![](play2.jpg)
 ![](play1.jpg)

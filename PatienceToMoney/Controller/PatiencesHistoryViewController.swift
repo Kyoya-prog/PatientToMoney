@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseFirestore
+import MBCircularProgressBar
 protocol DidDeletePatienceDelegate{
     
 }
@@ -22,17 +23,33 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
     var documentIdOfPatiencesHistoryArray:[Any] = []
     var uid = Auth.auth().currentUser!.uid
     var patiencesHistoryArray = [PatienceHistory]()
+    var sumMoney = Int()
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var sumMoneyLabel: UILabel!
+    @IBOutlet weak var progressBarView: MBCircularProgressBarView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         fetchData(uid: uid)
+        backButton.layer.cornerRadius = 50.0
+        
+        fetchData(uid: uid)
         activityIndicatorView.center = view.center
         activityIndicatorView.style = .large
         activityIndicatorView.color = .purple
-        
+        if patiencesHistoryArray.count > 0{
         view.addSubview(activityIndicatorView)
+        }
+        sumMoney = Int(UserDefaults.standard.object(forKey: "sumMoney") as! String)!
+        progressBarView.maxValue = CGFloat(100000)
+        progressBarView.value = CGFloat(sumMoney)
+        sumMoneyLabel.text = UserDefaults.standard.object(forKey: "sumMoney") as! String
+        progressBarView.progressColor = .red
+        progressBarView.emptyLineColor = .darkGray
+        progressBarView.progressAngle = 100
+        progressBarView.progressLineWidth = 5
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -74,8 +91,12 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
         }
     }
 
+
+    
     @IBAction func backToIndex(_ sender: Any) {
         let indexVC = self.storyboard?.instantiateViewController(identifier: "index") as! IndexViewController
+        indexVC.modalPresentationStyle = .fullScreen
+        present(indexVC, animated: true, completion: nil)
         
     }
     
@@ -85,6 +106,9 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
         let minusMoney = Int(money)
         resultMoney = resultMoney - minusMoney!
         UserDefaults.standard.set("\(resultMoney)", forKey: "sumMoney")
+        sumMoneyLabel.text = UserDefaults.standard.object(forKey: "sumMoney") as! String
+        let sumMoneyInt = Int(sumMoneyLabel.text!)
+        progressBarView.value = CGFloat(sumMoneyInt!)
        }
     
     func fetchData(uid:String){
