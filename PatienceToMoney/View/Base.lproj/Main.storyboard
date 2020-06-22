@@ -364,84 +364,40 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-5n-qcw">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-5n-qcw">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.92549639939999995" green="0.87512242730000001" blue="0.67831917350000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Pf9-ae-24T"/>
-                                                        <constraint firstAttribute="height" constant="40" id="sr1-Vv-P7C"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUT-Nm-lkK">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUT-Nm-lkK">
                                                     <rect key="frame" x="0.0" y="37" width="154" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="154" id="oY3-WI-YGU"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-3s-zF1">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-3s-zF1">
                                                     <rect key="frame" x="180" y="37" width="195" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="ykY-V8-csj"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-Ds-RS5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-Ds-RS5">
                                                     <rect key="frame" x="154" y="37" width="18" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="18" id="X9S-iV-kN2"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="2Fz-3s-zF1" firstAttribute="height" secondItem="oXt-5n-qcw" secondAttribute="height" id="2jE-Jy-P0W"/>
-                                                <constraint firstItem="yUT-Nm-lkK" firstAttribute="baseline" secondItem="SpI-Ds-RS5" secondAttribute="baseline" id="2jK-yH-6jr"/>
-                                                <constraint firstItem="SpI-Ds-RS5" firstAttribute="leading" secondItem="yUT-Nm-lkK" secondAttribute="trailing" id="3eb-oS-Cf4"/>
-                                                <constraint firstItem="yUT-Nm-lkK" firstAttribute="top" secondItem="pmZ-XJ-NCr" secondAttribute="topMargin" constant="26" id="FGz-tG-Arm"/>
-                                                <constraint firstItem="SpI-Ds-RS5" firstAttribute="leading" secondItem="yUT-Nm-lkK" secondAttribute="trailing" id="HG6-w4-xBG"/>
-                                                <constraint firstItem="oXt-5n-qcw" firstAttribute="centerX" secondItem="pmZ-XJ-NCr" secondAttribute="centerX" id="IRb-7V-fUe"/>
-                                                <constraint firstItem="yUT-Nm-lkK" firstAttribute="leading" secondItem="pmZ-XJ-NCr" secondAttribute="leading" id="LI7-6p-CFp"/>
-                                                <constraint firstItem="2Fz-3s-zF1" firstAttribute="leading" secondItem="SpI-Ds-RS5" secondAttribute="trailing" constant="8" id="VOi-Db-d6A"/>
-                                                <constraint firstAttribute="bottom" secondItem="yUT-Nm-lkK" secondAttribute="bottom" id="XGV-fC-UQG"/>
-                                                <constraint firstAttribute="trailing" secondItem="oXt-5n-qcw" secondAttribute="trailing" id="Xox-bD-IZq"/>
-                                                <constraint firstItem="oXt-5n-qcw" firstAttribute="leading" secondItem="pmZ-XJ-NCr" secondAttribute="leading" id="eC8-xm-b0H"/>
-                                                <constraint firstItem="yUT-Nm-lkK" firstAttribute="centerY" secondItem="SpI-Ds-RS5" secondAttribute="centerY" id="jiw-NZ-D8n"/>
-                                                <constraint firstAttribute="trailing" secondItem="2Fz-3s-zF1" secondAttribute="trailing" id="pIA-mI-TR0"/>
-                                                <constraint firstItem="SpI-Ds-RS5" firstAttribute="leading" secondItem="yUT-Nm-lkK" secondAttribute="trailing" id="r2W-ju-Lpg"/>
-                                                <constraint firstAttribute="trailing" secondItem="2Fz-3s-zF1" secondAttribute="trailing" id="r7c-f5-xnv"/>
-                                                <constraint firstItem="2Fz-3s-zF1" firstAttribute="leading" secondItem="SpI-Ds-RS5" secondAttribute="trailing" constant="8" id="rmQ-Ah-nZb"/>
-                                                <constraint firstItem="oXt-5n-qcw" firstAttribute="top" secondItem="pmZ-XJ-NCr" secondAttribute="top" id="sIG-OF-7er"/>
-                                                <constraint firstItem="yUT-Nm-lkK" firstAttribute="firstBaseline" secondItem="2Fz-3s-zF1" secondAttribute="firstBaseline" id="wYI-Qu-H9e"/>
-                                                <constraint firstItem="yUT-Nm-lkK" firstAttribute="baseline" secondItem="2Fz-3s-zF1" secondAttribute="baseline" id="ywh-De-F1i"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-MQ-1op">
-                                <rect key="frame" x="0.0" y="44" width="46" height="40"/>
-                                <color key="backgroundColor" red="0.87008294521099538" green="0.96217141128414463" blue="0.96848052740097046" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="OTh-ez-ksg"/>
-                                </constraints>
-                                <state key="normal" title="一覧へ">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="backToIndex:" destination="0Ja-Qh-xq3" eventType="touchUpInside" id="jXX-lc-X9X"/>
-                                    <segue destination="scD-df-jgH" kind="presentation" modalPresentationStyle="fullScreen" id="dEb-Ia-wRn"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あなたの我慢の歴史" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ab-Mh-kvs">
                                 <rect key="frame" x="109" y="356" width="156" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -450,22 +406,62 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-Vj-S6C" customClass="MBCircularProgressBarView">
-                                <rect key="frame" x="67" y="85" width="240" height="233"/>
+                                <rect key="frame" x="67" y="44" width="292" height="316"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/100000円" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcl-QU-jGo">
+                                        <rect key="frame" x="120" y="159" width="122" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAF-KD-Kjs">
+                                        <rect key="frame" x="24" y="134" width="130" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMc-Ni-Giw">
+                                        <rect key="frame" x="162" y="138" width="18" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-MQ-1op">
+                                <rect key="frame" x="0.0" y="149" width="59" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87008294521099538" green="0.96217141128414463" blue="0.96848052740097046" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="一覧へ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToIndex:" destination="0Ja-Qh-xq3" eventType="touchUpInside" id="jXX-lc-X9X"/>
+                                    <segue destination="scD-df-jgH" kind="presentation" modalPresentationStyle="fullScreen" id="dEb-Ia-wRn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90787626024900581" green="0.96130555868148804" blue="0.91827374452220423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="DiI-Pr-2fa"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z8L-3A-Dvm"/>
                     <connections>
+                        <outlet property="progressBarView" destination="PTQ-Vj-S6C" id="ONM-dM-YpK"/>
+                        <outlet property="sumMoneyLabel" destination="YAF-KD-Kjs" id="RPb-Es-W9W"/>
                         <outlet property="tableView" destination="VLp-8U-Npu" id="wGg-ZK-I71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP4-rN-mQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357.5999999999999" y="-882.26600985221683"/>
+            <point key="canvasLocation" x="1280.8" y="-846.79802955665025"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="5yW-9D-TgX">
