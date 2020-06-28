@@ -120,8 +120,8 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
                  self.documentIdOfPatiencesHistoryArray.append(document.documentID)
                  let title = document.data()["title"]
                  let money = document.data()["money"]
-                 let created_at = document.data()["created_at"] as! String
-                    self.patiencesHistoryArray.append(PatienceHistory(title: title as! String, money: money as! String, created_at: created_at, uid: self.uid))
+                 let created_at = document.data()["created_at"]
+                    self.patiencesHistoryArray.append(PatienceHistory(title: title as! String, money: money as! String, created_at: created_at as! String, uid: self.uid))
                     self.tableView.delegate = self
                     self.tableView.dataSource = self
                     self.tableView.reloadData()

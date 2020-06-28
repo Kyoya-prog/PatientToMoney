@@ -28,7 +28,7 @@ class InputViewController: UIViewController,UITextFieldDelegate {
     @IBAction func register(_ sender: Any) {
         if titleTextField.text == ""||moneyTextField.text == ""{
             inputButton.isEnabled = false
-            alertLabel.text = "タイトルと貯金額は必須項目です！！"
+            alertLabel.text = "タイトルと貯金額は必須項目です!!"
         }else{
             let title = titleTextField.text!
             let money = moneyTextField.text!
