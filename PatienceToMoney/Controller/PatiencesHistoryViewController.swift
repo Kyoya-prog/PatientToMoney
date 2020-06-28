@@ -45,11 +45,11 @@ class PatiencesHistoryViewController: UIViewController,UITableViewDelegate,UITab
         sumMoney = Int(UserDefaults.standard.object(forKey: "sumMoney") as! String)!
         progressBarView.maxValue = CGFloat(100000)
         progressBarView.value = CGFloat(sumMoney)
-        sumMoneyLabel.text = UserDefaults.standard.object(forKey: "sumMoney") as! String
-        progressBarView.progressColor = .red
-        progressBarView.emptyLineColor = .darkGray
+        sumMoneyLabel.text = UserDefaults.standard.object(forKey: "sumMoney") as! String + "円"
+        progressBarView.progressLineWidth = 20
+        progressBarView.emptyLineWidth = 20
+        progressBarView.progressCapType = 2
         progressBarView.progressAngle = 100
-        progressBarView.progressLineWidth = 5
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
