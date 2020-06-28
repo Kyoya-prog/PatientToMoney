@@ -641,11 +641,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gkL-bZ-yob">
-                                <rect key="frame" x="121" y="108" width="223" height="34"/>
+                                <rect key="frame" x="121" y="115" width="223" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="35" id="C88-bv-sWO"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="GW6-oJ-tZF"/>
-                                    <constraint firstAttribute="height" constant="34" id="dsS-fP-hi9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -657,17 +656,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-hs-sOd">
-                                <rect key="frame" x="121" y="207" width="223" height="34"/>
+                                <rect key="frame" x="121" y="215" width="223" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="35" id="6LD-5Y-ERW"/>
-                                    <constraint firstAttribute="height" constant="34" id="LMR-jP-Xwk"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="vHp-a3-cAq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDT-pP-GWQ">
-                                <rect key="frame" x="8" y="315" width="97" height="54"/>
+                                <rect key="frame" x="8" y="324" width="97" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="jZy-PK-E2B"/>
                                 </constraints>
@@ -676,9 +674,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSz-jm-h2d">
-                                <rect key="frame" x="121" y="325" width="223" height="34"/>
+                                <rect key="frame" x="121" y="334" width="223" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="ZRW-3N-Zrg"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="ai1-vv-QPV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -696,10 +693,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我慢項目と貯金額を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ze-9j-4vK">
-                                <rect key="frame" x="31" y="64" width="313" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="elH-8V-yKv"/>
-                                </constraints>
+                                <rect key="frame" x="31" y="64" width="313" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -711,10 +705,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcA-8c-cYI">
-                                <rect key="frame" x="40" y="396" width="297" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="0F3-T3-F0z"/>
-                                </constraints>
+                                <rect key="frame" x="40" y="406" width="297" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
