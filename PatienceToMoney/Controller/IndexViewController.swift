@@ -102,7 +102,8 @@ class IndexViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         activityIndicatorView.startAnimating()
         let docRef = db.collection("patiences")
         docRef.whereField("uid", isEqualTo: uid).getDocuments { (QuerySnapshot, err) in
-            for document in QuerySnapshot!.documents {
+            guard let documents = QuerySnapshot?.documents else{return}
+            for document in documents {
                 self.documentIdArray.append(document.documentID)
                 let title = document.data()["title"]
                 let money = document.data()["money"]
