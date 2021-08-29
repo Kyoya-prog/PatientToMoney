@@ -10,6 +10,7 @@ import Foundation
 
 class PatienceHistory{
     
+    
     var title = String()
     var money = String()
     var created_at = String()
